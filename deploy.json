@@ -3,16 +3,56 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "type": "string"
+            "type": "string",
+            "metadata": {
+                "description": "Which DataCenter Region will host the VM"
+            },
+            "allowedValues": [
+                "West Europe",
+                "East US",
+                "Southeast Asia",
+                "North Europe"
+            ],
+            "defaultValue": "VirtualMachine"
         },
         "virtualMachineName": {
-            "type": "string"
+            "type": "string",
+            "metadata": {
+                "description": "Name of VM"
+            },
+            "defaultValue": "VirtualMachine"
         },
         "virtualMachineSize": {
-            "type": "string"
+            "type": "string",
+             "metadata": {
+                "description": "CPU&Memory"
+            },
+            "allowedValues": [
+                "Standard_DS2",
+                "Standard_DS3",
+                "Standard_DS4",
+                "Standard_DS11",
+                "Standard_DS12",
+                "Standard_DS13",
+                "Standard_DS14",
+				"Standard_DS1_v2",
+                "Standard_DS2_v2",
+                "Standard_DS3_v2",
+                "Standard_DS4_v2",
+                "Standard_DS5_v2",
+                "Standard_DS11_v2",
+                "Standard_DS12_v2",
+                "Standard_DS13_v2",
+                "Standard_DS14_v2",
+                "Standard_DS15_v2"
+            ],
+            "defaultValue": "Standard_DS3_v2"
         },
         "adminUsername": {
-            "type": "string"
+            "type": "string",
+             "metadata": {
+                "description": "must differ *admin*"
+            }
         },
         "virtualNetworkName": {
             "type": "string"
